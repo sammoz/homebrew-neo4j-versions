@@ -24,7 +24,7 @@ class Neo4j232 < Formula
 
     # Adjust UDC props
     # Suppress the empty, focus-stealing java gui.
-    (libexec/"conf/neo4j-wrapper.conf").append_lines <<-EOS.undent
+    (libexec/"conf/neo4j-wrapper.conf").append_lines <<-EOS
       wrapper.java.additional=-Djava.awt.headless=true
       wrapper.java.additional.4=-Dneo4j.ext.udc.source=homebrew
     EOS
